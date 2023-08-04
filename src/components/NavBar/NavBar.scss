@@ -1,0 +1,168 @@
+@import "/scss/variables";
+
+.navBar {
+    & .open {
+        width: 30px;
+        height: 30px;
+
+        background-color: transparent;
+
+        border: none;
+
+        cursor: pointer;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    & .navList {
+        /* TODO: verify if % or px is better */
+        width: 326px;
+        height: 0;
+
+        background-color: $dark-violet;
+
+        border-radius: 10px;
+
+        position: absolute;
+        z-index: 99;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding: 0 22px;
+
+        overflow: hidden;
+
+        transition: height 0.8s ease-in-out;
+    }
+
+    & .navContainer {
+        padding: 35px 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &:first-child {
+            height: 210px;
+        }
+
+        &:last-child {
+            height: 170px;
+        }
+    }
+
+    & .navItem {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: $white;
+
+        margin-bottom: 25px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.singUp {
+            width: 100%;
+            height: 50px;
+
+            border-radius: 50px;
+
+            background-color: $cyan;
+        }
+    }
+
+    & .separator {
+        height: 1px;
+
+        border: none;
+
+        background-color: $grayish-violet;
+    }
+
+    &.open {
+        & .navList {
+            height: 380px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .navBar {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 32px;
+
+        & .open,
+        & .separator {
+            display: none;
+        }
+
+        & .navList {
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+
+            background-color: transparent;
+        }
+
+        & .navContainer {
+            height: auto !important;
+
+            flex-direction: row;
+            gap: 32px;
+        }
+
+        & .navItem {
+            color: $grayish-violet;
+
+            margin-bottom: 0;
+
+            font-size: 1.1em;
+
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $very-dark-violet;
+            }
+
+            &.singUp {
+                width: auto;
+                height: 45px;
+
+                padding: 0 22px;
+
+                color: $white;
+
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
