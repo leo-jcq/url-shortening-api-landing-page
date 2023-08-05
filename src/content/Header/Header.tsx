@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import './Header.scss';
 import NavBar from '../../components/NavBar/NavBar';
 import { logo } from '../../constants/icons';
+import './Header.scss';
 
 const Header: FC = () => {
     return (
