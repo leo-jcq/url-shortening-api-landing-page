@@ -11,7 +11,7 @@ const Hero: FC = () => {
                     Build your brand’s recognition and get detailed insights on how your links are
                     performing.
                 </p>
-                <label htmlFor="linkInput" className="start">
+                <label htmlFor="linkInput" className="startBtn">
                     Get Started
                 </label>
             </div>
