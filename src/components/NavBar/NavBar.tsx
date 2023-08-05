@@ -14,7 +14,7 @@ const NavBar: FC = () => {
                 !openBtnRef.current?.contains(e.target as Node) &&
                 !navListRef.current?.contains(e.target as Node)
             ) {
-                console.log(!openBtnRef.current?.contains(e.target as Node));
+                setIsOpen(false);
             }
         };
 

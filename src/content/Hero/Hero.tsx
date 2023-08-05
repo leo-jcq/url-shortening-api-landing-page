@@ -1,14 +1,8 @@
-import { FC, RefObject } from 'react';
+import { FC } from 'react';
 import illustrationWorking from '../../assets/illustration-working.svg';
 import './Hero.scss';
 
-interface HeroProps {
-    inputRef: RefObject<HTMLInputElement>;
-}
-
-const Hero: FC<HeroProps> = ({ inputRef }) => {
-    const handleClick = () => inputRef.current?.focus();
-
+const Hero: FC = () => {
     return (
         <div className="hero">
             <div className="text">
@@ -17,11 +11,11 @@ const Hero: FC<HeroProps> = ({ inputRef }) => {
                     Build your brand’s recognition and get detailed insights on how your links are
                     performing.
                 </p>
-                <button className="start" onClick={handleClick}>
+                <label htmlFor="linkInput" className="start">
                     Get Started
-                </button>
+                </label>
             </div>
-            
+
             <img src={illustrationWorking} alt="Working" className="image" />
         </div>
     );
