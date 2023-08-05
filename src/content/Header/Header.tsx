@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import logo from '../../assets/logo.svg';
 import './Header.scss';
 import NavBar from '../../components/NavBar/NavBar';
+import { logo } from '../../constants/icons';
 
 const Header: FC = () => {
     return (
         <header className="header">
-            <img src={logo} alt="Shortly" className="logo" />
+            <div className="logo">{logo}</div>
 
             <NavBar />
         </header>

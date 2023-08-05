@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import './App.scss';
+import Boost from './content/Boost/Boost';
+import Footer from './content/Footer/Footer';
 import Header from './content/Header/Header';
 import Hero from './content/Hero/Hero';
 import Links from './content/Links/Links';
 import Stats from './content/Stats/Stats';
-import Boost from './content/Boost/Boost';
 
 const App: FC = () => {
     return (
@@ -14,6 +15,7 @@ const App: FC = () => {
             <Links />
             <Stats />
             <Boost />
+            <Footer />
         </div>
     );
 };
