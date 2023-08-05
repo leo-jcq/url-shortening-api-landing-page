@@ -1,0 +1,90 @@
+@import "/scss/variables";
+
+.linkInput {
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    background-color: $dark-violet;
+    background-image: url("./bg-shorten-mobile.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+
+    border-radius: 10px;
+
+    margin-bottom: 16px;
+
+    & .inputContainer {
+        width: 100%;
+    }
+
+    & .input,
+    & .submit {
+        width: 100%;
+        height: 47px;
+
+        border-radius: 5px;
+
+        border: none;
+    }
+
+    & .input {
+        padding: 0 16px;
+
+        &::placeholder {
+            color: $grayish-violet;
+        }
+    }
+
+    & .error {
+        color: $red;
+
+        display: none;
+
+        font-size: 0.7em;
+    }
+
+    & .submit {
+        background-color: $cyan;
+
+        font-size: 1.1em;
+        font-weight: 700;
+        color: $white;
+
+        cursor: pointer;
+
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &.error {
+        & .input {
+            border: 3px solid $red;
+        }
+
+        & .error {
+            display: inline;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .linkInput {
+        flex-direction: row;
+        justify-content: space-between;
+
+        background-image: url("./bg-shorten-desktop.svg");
+        background-position: center;
+        background-size: 100% 100%;
+
+        & .submit {
+            width: 200px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "/scss/variables";
+
+.links {
+    width: 100%;
+
+    padding: 0 5% 0 5%;
+
+    position: relative;
+
+    background-color: $light-gray;
+
+    margin-bottom: 75px;
+
+    & .content {
+        transform: translateY(-47.5px);
+    }
+
+    & .list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}

@@ -1,0 +1,83 @@
+@import "/scss/variables";
+
+.link {
+    background-color: $white;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    & .original,
+    & .shorten {
+        display: block;
+
+        margin-bottom: 10px;
+
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    & .original {
+        color: $very-dark-violet;
+    }
+
+    & .shorten {
+        color: $cyan;
+    }
+
+    & .copy {
+        width: 100%;
+
+        padding: 10px;
+
+        cursor: pointer;
+
+        border: none;
+        border-radius: 5px;
+
+        background-color: $cyan;
+
+        font-weight: 700;
+        color: $white;
+
+        transition: color 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.copied {
+            background-color: $dark-violet;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .original,
+        & .shorten {
+            margin-bottom: 0;
+        }
+
+        & .right {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & .shorten {
+            display: block;
+        }
+
+        & .copy {
+            width: auto;
+
+            padding: 10px 22px;
+        }
+    }
+}
