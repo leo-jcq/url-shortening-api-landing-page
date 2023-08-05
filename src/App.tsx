@@ -4,6 +4,7 @@ import Header from './content/Header/Header';
 import Hero from './content/Hero/Hero';
 import Links from './content/Links/Links';
 import Stats from './content/Stats/Stats';
+import Boost from './content/Boost/Boost';
 
 const App: FC = () => {
     return (
@@ -12,6 +13,7 @@ const App: FC = () => {
             <Hero />
             <Links />
             <Stats />
+            <Boost />
         </div>
     );
 };
